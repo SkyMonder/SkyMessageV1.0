@@ -1,0 +1,32 @@
+:root{
+  --bg:#0f1724;
+  --card:#0b1220;
+  --muted:#9aa4b2;
+  --accent:#6fb3ff;
+  --glass: rgba(255,255,255,0.03);
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;background:linear-gradient(180deg,#07142a 0%, #071b28 100%);color:#e6eef8;min-height:100vh}
+.app{display:grid;grid-template-columns:280px 1fr 260px;gap:20px;padding:28px;align-items:start}
+.sidebar{position:sticky;top:28px}
+.brand{display:flex;align-items:center;gap:12px;margin-bottom:18px}
+.logo{width:44px;height:44px}
+h1{font-size:18px;margin:0}
+.card{background:var(--card);padding:12px;border-radius:12px;box-shadow:0 6px 18px rgba(2,6,23,0.6);margin-bottom:12px}
+input{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit;margin-top:8px}
+.btn{display:inline-block;padding:8px 12px;border-radius:10px;border:none;background:transparent;color:var(--accent);cursor:pointer;margin-top:10px}
+.btn.primary{background:linear-gradient(90deg,var(--accent),#7ce0ff);color:#042033;font-weight:600}
+.results{list-style:none;padding:0;margin:8px 0 0 0;max-height:300px;overflow:auto}
+.results li{padding:8px;border-radius:8px;cursor:pointer;background:transparent;margin-bottom:6px}
+.main{display:flex;flex-direction:column;gap:12px}
+.chat-header{display:flex;justify-content:space-between;align-items:center;padding:12px;background:var(--glass);border-radius:12px}
+.messages{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:12px;min-height:420px;overflow:auto;display:flex;flex-direction:column;gap:8px}
+.message{max-width:70%;padding:12px;border-radius:12px;background:rgba(255,255,255,0.03);backdrop-filter:blur(6px)}
+.message.you{margin-left:auto;background:linear-gradient(90deg, rgba(111,179,255,0.12), rgba(124,224,255,0.06));color:#eaf8ff}
+.message.other{margin-right:auto}
+.composer{display:flex;gap:12px;padding:8px}
+.panel{position:sticky;top:28px}
+.me{padding:14px;text-align:center}
+.video{position:fixed;right:20px;bottom:20px;width:180px;height:120px;border-radius:8px;box-shadow:0 8px 30px rgba(2,6,23,0.6);object-fit:cover}
+.hidden{display:none}
+@media (max-width:1000px){.app{grid-template-columns:1fr;grid-auto-rows:auto}.panel{display:none}.sidebar{order:2}.main{order:1}}

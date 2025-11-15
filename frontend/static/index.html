@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SkyMessage</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="auth">
+    <h3>Регистрация</h3>
+    <input id="reg-username" placeholder="username" />
+    <input id="reg-password" type="password" placeholder="password" />
+    <button id="btn-register">Зарегистрироваться</button>
+
+    <h3>Вход</h3>
+    <input id="login-username" placeholder="username" />
+    <input id="login-password" type="password" placeholder="password" />
+    <button id="btn-login">Войти</button>
+  </div>
+
+  <div id="main" style="display:none;">
+    <input id="search" placeholder="Поиск пользователей" />
+    <ul id="search-results"></ul>
+
+    <section id="chat">
+      <h3>Чат с <span id="chat-with">—</span></h3>
+      <div id="chat-messages"></div>
+      <input id="chat-input" placeholder="Сообщение" />
+      <button id="send-chat">Отправить</button>
+      <button id="call-btn">Позвонить</button>
+    </section>
+
+    <div id="call-container" style="display:none;">
+      <h3>Звонок с <span id="call-with"></span></h3>
+      <video id="localVideo" autoplay muted></video>
+      <video id="remoteVideo" autoplay></video>
+      <div>
+        <button id="btn-answer">Принять</button>
+        <button id="btn-decline">Отклонить</button>
+        <button id="btn-end">Завершить</button>
+        <button id="btn-mic">Микрофон</button>
+        <button id="btn-camera">Камера</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.socket.io/4.5.0/socket.io.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
