@@ -5,7 +5,3 @@ services:
     plan: free
     buildCommand: pip install -r backend/requirements.txt
     startCommand: gunicorn --worker-class eventlet -w 1 backend.app:app --bind 0.0.0.0:$PORT
-    envVars:
-      - key: PYTHON_VERSION
-        value: 3.11
-    pythonVersion: 3.11
